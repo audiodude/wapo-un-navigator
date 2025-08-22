@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "WashingtonPost Logger",
+  "version": "1.0",
+  "description": "Executes console.log on washingtonpost.com visits",
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.washingtonpost.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "permissions": [
+    "*://*.washingtonpost.com/*"
+  ]
+}
